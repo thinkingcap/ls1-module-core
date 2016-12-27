@@ -42,6 +42,7 @@
 			 * Send the message
 			 */
 			require_once PATH_APP."/modules/core/thirdpart/class.phpmailer.php";
+			require_once PATH_APP."/modules/core/thirdpart/class.smtp.php";
 
 			$Mail = new PHPMailer();
 
@@ -120,6 +121,14 @@
 				'sender'=>$settings->sender_email,
 				'subject'=>$subject,
 				'data'=>$custom_data
+			);
+
+			$Mail->SMTPOptions = array(
+				'ssl' => array(
+					'verify_peer' => false,
+        			'verify_peer_name' => false,
+        			'allow_self_signed' => true
+				)
 			);
 
 			$external_sender_params = (object)$external_sender_params;
