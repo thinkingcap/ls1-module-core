@@ -467,3 +467,4 @@
 #1.13.3|@1_13_3_framework_update Evocode Security Patch. Must read http://evocode.com/blog/lemonstand-v1-vulnerability/
 #1.13.4 Bug Fix: CURLOPT_HTTPHEADER set with underscores caused issue on some stacks
 #1.13.5 Update PHPMailer for RCE https://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10033-Vuln.html
+#1.13.6 Update for CVE-2016-10045
